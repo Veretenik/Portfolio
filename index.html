@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasia Veretennikova - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <video autoplay muted loop class="hero-animation">
+            <source src="assets/Dream%204.MP4" type="video/mp4">
+            <source src="assets/Poker/Anastasia_Veretennikova.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Navigation Buttons Below Hero -->
+        <nav class="hero-nav">
+            <button class="nav-btn" data-target="about">About Me</button>
+            <button class="nav-btn" data-target="showreel">Showreel</button>
+            <button class="nav-btn" data-target="projects">Projects</button>
+        </nav>
+    </section>
+
+    <!-- Horizontal Scrolling Gallery -->
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title">Featured Works</h2>
+        
+        <div class="gallery-wrapper">
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="assets/Illustration/Untitled_Artwork%2017.png" alt="Illustration 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Illustration/Untitled_Artwork%2059.png" alt="Illustration 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Illustration/Untitled_Artwork%20copy.png" alt="Illustration 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Illustration/Untitled_Artwork.png" alt="Illustration 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/2026_SehsüchteTeam-01180.jpg" alt="Illustration 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="assets/Untitled_Artwork.png" alt="Portrait">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    I'm a passionate artist and animator specializing in character animation, digital illustration, and concept art. 
+                    My work brings ideas to life through dynamic motion and compelling visual storytelling. 
+                    I've worked on various animation projects, character designs, and illustrations, blending traditional artistic principles 
+                    with modern digital techniques to create engaging and immersive experiences.
+                </p>
+                <div class="skills-list">
+                    <div class="skill-tag">2D Animation</div>
+                    <div class="skill-tag">Character Design</div>
+                    <div class="skill-tag">Digital Illustration</div>
+                    <div class="skill-tag">Concept Art</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showreel Section -->
+    <section id="showreel" class="showreel-section">
+        <div class="showreel-container">
+            <div class="showreel-content">
+                <h2 class="section-title">Showreel</h2>
+                <p class="showreel-text">
+                    Watch a compilation of my recent animation work and character designs. This reel showcases 
+                    my range of skills from character animation to concept art and digital illustration. 
+                    Each piece represents a different project and creative approach.
+                </p>
+                <div class="showreel-highlights">
+                    <div class="highlight-item">
+                        <h4>Character Animation</h4>
+                        <p>Dynamic walk cycles and character movements</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>Concept Art</h4>
+                        <p>Visual development and character design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showreel-video">
+                <video controls width="100%">
+                    <source src="assets/Anja/AnjaReel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-project="anja">
+                <img src="assets/Anja/Untitled_Artwork%2017.png" alt="Anja Animation Project">
+                <div class="project-overlay">
+                    <h3>Anja Animation</h3>
+                    <p>Character animation project</p>
+                </div>
+            </div>
+            <div class="project-card" data-project="hexen">
+                <img src="assets/Hexen/HexenVertig.mov" alt="Hexen Project">
+                <div class="project-overlay">
+                    <h3>Hexen</h3>
+                    <p>Experimental animation</p>
+                </div>
+            </div>
+            <div class="project-card" data-project="illustration">
+                <img src="assets/Illustration/Untitled_Artwork%2059.png" alt="Illustration Series">
+                <div class="project-overlay">
+                    <h3>Illustration Series</h3>
+                    <p>Digital artwork collection</p>
+                </div>
+            </div>
+            <div class="project-card" data-project="poker">
+                <img src="assets/Poker/Untitled_Artwork-1.png" alt="Poker Project">
+                <div class="project-overlay">
+                    <h3>Poker Project</h3>
+                    <p>Animation & design collaboration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
