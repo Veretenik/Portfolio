@@ -241,7 +241,7 @@ body {
     z-index: 0;
 }
 
-.showreel-content > * {
+.showreel-content>* {
     position: relative;
     z-index: 1;
 }
