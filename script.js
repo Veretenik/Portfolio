@@ -15,41 +15,108 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', function() {
         const projectName = this.getAttribute('data-project');
         console.log('Clicked project:', projectName);
-        // Future: Add modal or navigation to project detail page
-        // window.location.href = `/projects/${projectName}.html`;
     });
 });
 
-// ===== PARALLAX SCROLLING FOR GALLERY =====
-const galleryContainer = document.querySelector('.gallery-container');
-const galleryWrapper = document.querySelector('.gallery-wrapper');
-
-if (galleryContainer && galleryWrapper) {
-    let scrollPosition = 0;
+// ===== HORIZONTAL SCROLL GALLERY ON VERTICAL SCROLL =====
+(function() {
+    // Get elements
+    const section = document.getElementById('gallery');
+    const container = document.querySelector('.gallery-container');
     
-    window.addEventListener('scroll', function() {
-        const gallerySection = document.querySelector('.gallery-section');
-        if (!gallerySection) return;
+    if (!section || !container) {
+        console.error('Gallery section or container not found!');
+        return;
+    }
+
+    // Wait for images to load to get correct dimensions
+    let imagesLoaded = 0;
+    const images = container.querySelectorAll('img');
+    const totalImages = images.length;
+
+    function onAllImagesLoaded() {
+        console.log('All images loaded, initializing scroll effect');
         
-        const sectionRect = gallerySection.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+        // Get dimensions
+        const containerWidth = container.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        const scrollDistance = containerWidth - viewportWidth + 100; // Extra padding
         
-        // Check if gallery section is in viewport
-        if (sectionRect.top < windowHeight && sectionRect.bottom > 0) {
-            // Calculate scroll progress (0 to 1)
-            const scrollProgress = 1 - (sectionRect.top / (windowHeight + sectionRect.height));
+        console.log('Container width:', containerWidth);
+        console.log('Viewport width:', viewportWidth);
+        console.log('Scroll distance:', scrollDistance);
+
+        if (scrollDistance <= 0) {
+            console.log('Content fits in viewport, no scroll needed');
+            return;
+        }
+
+        // Scroll handler
+        function handleScroll() {
+            const rect = section.getBoundingClientRect();
+            const sectionTop = rect.top;
+            const sectionHeight = section.offsetHeight;
+            const windowHeight = window.innerHeight;
+
+            // Only animate when section is in view
+            if (rect.bottom < 0 || rect.top > windowHeight) {
+                return;
+            }
+
+            // Calculate progress: 0 when section enters, 1 when section leaves
+            // Section enters when its top reaches bottom of viewport
+            // Section leaves when its bottom reaches top of viewport
+            const totalScrollRange = sectionHeight + windowHeight;
+            const currentPosition = windowHeight - sectionTop;
+            const progress = currentPosition / totalScrollRange;
             
-            // Calculate horizontal offset based on scroll progress
-            // More scrolling down = more shift to the left
-            const maxOffset = galleryContainer.scrollWidth - galleryWrapper.clientWidth;
-            const offset = -scrollProgress * maxOffset;
+            // Clamp progress between 0 and 1
+            const clampedProgress = Math.min(Math.max(progress, 0), 1);
             
-            // Apply the transform
-            galleryContainer.style.setProperty('--scroll-offset', `${offset}px`);
-            galleryContainer.style.transform = `translateX(${offset}px)`;
+            // Calculate horizontal offset
+            const xOffset = clampedProgress * scrollDistance;
+            
+            // Apply transform
+            container.style.transform = 'translateX(' + (-xOffset) + 'px)';
+        }
+
+        // Add scroll listener
+        document.addEventListener('scroll', handleScroll);
+        
+        // Run once on init
+        handleScroll();
+        
+        // Recalculate on resize
+        window.addEventListener('resize', function() {
+            handleScroll();
+        });
+    }
+
+    // Check if images are already loaded (cached)
+    images.forEach(function(img) {
+        if (img.complete) {
+            imagesLoaded++;
+        } else {
+            img.addEventListener('load', function() {
+                imagesLoaded++;
+                if (imagesLoaded === totalImages) {
+                    onAllImagesLoaded();
+                }
+            });
+            img.addEventListener('error', function() {
+                imagesLoaded++;
+                if (imagesLoaded === totalImages) {
+                    onAllImagesLoaded();
+                }
+            });
         }
     });
-}
+
+    // If all images were already loaded
+    if (imagesLoaded === totalImages) {
+        onAllImagesLoaded();
+    }
+})();
 
 // ===== HERO ANIMATION FALLBACK =====
 // In case the MP4 doesn't load, show a fallback
