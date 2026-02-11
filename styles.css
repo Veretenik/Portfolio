@@ -33,7 +33,7 @@ body {
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 
 .hero-animation {
@@ -59,42 +59,30 @@ body {
     padding: 12px 32px;
     font-size: 1rem;
     font-weight: 600;
-    border: 2px solid transparent;
+    border: none;
     background-color: transparent;
-    color: var(--secondary-color);
+    color: #FFCD7D;
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-.nav-btn[data-target="about"],
-.nav-btn[data-target="projects"] {
-    background-color: #EF7754;
-    color: var(--secondary-color);
-}
-
-.nav-btn[data-target="showreel"] {
-    background-color: transparent;
-    border: 2px solid #FFCD7D;
-    color: #FFCD7D;
-}
-
 .nav-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(255, 107, 107, 0.3);
+    opacity: 0.7;
+}
 }
 
 /* ===== GALLERY SECTION ===== */
 .gallery-section {
     position: relative;
     width: 100%;
-    height: 150vh;
-    padding: 6rem 0;
+    height: 70vh;
+    padding: 3rem 0;
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
@@ -144,7 +132,7 @@ body {
     padding: 6rem 2rem;
     background-color: var(--light-gray);
     position: relative;
-    margin-top: -100px;
+    margin-top: 0;
     z-index: 50;
 }
 
@@ -217,33 +205,37 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.year-badge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-.showreel-content {
-    padding: 3rem;
-    background: url('assets/2026_SehsüchteTeam-01180.jpg') center/cover no-repeat;
-    border-radius: 12px;
+    font-size: 15vw;
+    font-weight: 700;
+    color: #FFCD7D;
+    line-height: 0.85;
+    text-align: center;
     position: relative;
 }
 
-.showreel-content::before {
-    content: '';
+.year-badge span {
+    display: block;
+}
+
+.showreel-label {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    z-index: 0;
-}
-
-.showreel-content>* {
-    position: relative;
-    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    margin-top: 0;
+    color: #EF7754;
 }
 
 .showreel-content .section-title {
@@ -257,7 +249,7 @@ body {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 0;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .showreel-highlights {
