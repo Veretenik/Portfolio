@@ -281,12 +281,10 @@ body {
     aspect-ratio: 16 / 9;
 }
 
-.showreel-video video {
+.showreel-video iframe {
     width: 100%;
     height: 100%;
-    display: block;
-    object-fit: cover;
-    filter: brightness(0.67);
+    border-radius: 12px;
 }
 
 /* ===== PROJECTS SECTION ===== */
