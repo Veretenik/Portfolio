@@ -17,9 +17,9 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Indie Flower", cursive;
     color: var(--primary-color);
-    background-color: var(--light-gray);
+    background-color: #ffffff;
     overflow-x: hidden;
 }
 
@@ -56,9 +56,10 @@ body {
 }
 
 .nav-btn {
-    padding: 12px 32px;
-    font-size: 1rem;
-    font-weight: 600;
+    padding: 20px 50px;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Barrio", system-ui;
     border: none;
     background-color: transparent;
     color: #FFCD7D;
@@ -68,17 +69,20 @@ body {
     text-transform: uppercase;
 }
 
+.nav-btn[data-target="showreel"] {
+    color: #EF7754;
+}
+
 .nav-btn:hover {
     opacity: 0.7;
-}
 }
 
 /* ===== GALLERY SECTION ===== */
 .gallery-section {
     position: relative;
     width: 100%;
-    height: 70vh;
-    padding: 3rem 0;
+    height: 60vh;
+    padding: 2rem 0 1rem 0;
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
@@ -91,6 +95,7 @@ body {
 }
 
 .section-title {
+    font-family: "Barrio", system-ui;
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
@@ -129,13 +134,12 @@ body {
 /* ===== ABOUT SECTION ===== */
 .about-section {
     width: 100%;
-    padding: 6rem 2rem;
-    background-color: var(--light-gray);
+    padding: 0 2rem 2rem 2rem;
+    background-color: transparent;
     position: relative;
-    margin-top: -80px;
+    margin-top: -15rem;
     z-index: 50;
-}
-    z-index: 50;
+    overflow: visible;
 }
 
 .about-container {
@@ -143,43 +147,62 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 4rem;
+    gap: 2rem;
     align-items: flex-start;
+    position: relative;
+    overflow: visible;
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+/* Overlay title "About Me" */
+.about-container .section-title {
+    position: absolute;
+    top: -5rem;
+    right: 2rem;
+    left: auto;
+    font-family: "Barrio", system-ui;
+    font-size: 6rem;
+    font-weight: 700;
+    color: #FFCD7D;
+    z-index: 100;
+    pointer-events: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    grid-column: 1 / -1;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+    padding: 1rem 0 1rem 0;
+}
+
+.about-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #805386;
+    text-align: left;
 }
 
 .about-image {
-    width: 200px;
+    width: 350px;
     height: auto;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .about-image img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;
-}
-
-.about-content {
-    padding: 2rem 0;
-}
-
-.about-content .section-title {
-    text-align: right;
-    margin-bottom: 1.5rem;
-    font-size: 3rem;
-    color: #FFCD7D;
-}
-
-.about-text {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: #805386;
-    text-align: right;
+    object-fit: cover;
 }
 
 .skills-list {
@@ -200,11 +223,11 @@ body {
 /* ===== SHOWREEL SECTION ===== */
 .showreel-section {
     width: 100%;
-    padding: 6rem 2rem;
-    background-color: var(--light-gray);
+    padding: 2rem 2rem;
+    background-color: transparent;
     position: relative;
-    margin-top: -80px;
-    z-index: 40;
+    margin-top: -6rem;
+    z-index: 60;
 }
 
 .showreel-container {
@@ -214,6 +237,8 @@ body {
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
     align-items: stretch;
+    position: relative;
+    z-index: 60;
 }
 
 .year-badge {
@@ -221,12 +246,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 15vw;
+    font-family: "Barrio", system-ui;
+    font-size: 18vw;
     font-weight: 700;
     color: #FFCD7D;
-    line-height: 0.85;
+    line-height: 0.7;
     text-align: center;
     position: relative;
+    margin-top: -14rem;
+    z-index: 100;
 }
 
 .year-badge span {
@@ -238,7 +266,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem;
+    font-family: "Barrio", system-ui;
+    font-size: 3rem;
+    font-weight: 700;
     letter-spacing: 0.3rem;
     margin-top: 0;
     color: #EF7754;
@@ -285,6 +315,9 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     aspect-ratio: 16 / 9;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 60;
 }
 
 .showreel-video iframe {
@@ -296,8 +329,19 @@ body {
 /* ===== PROJECTS SECTION ===== */
 .projects-section {
     width: 100%;
-    padding: 6rem 2rem;
+    padding: 2rem 2rem 4rem 2rem;
     background-color: var(--secondary-color);
+}
+
+.projects-section .section-title {
+    font-family: "Barrio", system-ui;
+    font-size: 6rem;
+    font-weight: 700;
+    color: #FFCD7D;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .projects-grid {
@@ -394,12 +438,26 @@ body {
         gap: 2rem;
     }
 
+    .about-image {
+        order: -1;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .about-container .section-title {
+        position: relative;
+        top: 0;
+        font-size: 3rem;
+        text-align: center;
+        color: #FFCD7D;
+    }
+
     .showreel-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .about-content .section-title,
     .showreel-content .section-title {
         text-align: center;
     }
