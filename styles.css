@@ -107,14 +107,16 @@ body {
 .gallery-wrapper {
     position: relative;
     width: 100%;
-    overflow: visible;
-    padding: 0;
+    overflow: hidden;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .gallery-container {
     display: flex;
     gap: 2rem;
-    padding-left: 2rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .gallery-item {
@@ -136,7 +138,7 @@ body {
     padding: 0 2rem 2rem 2rem;
     background-color: transparent;
     position: relative;
-    margin-top: -15rem;
+    margin-top: -8rem;
     z-index: 50;
     overflow: visible;
 }
