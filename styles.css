@@ -136,7 +136,7 @@ body {
     padding: 0 2rem 2rem 2rem;
     background-color: transparent;
     position: relative;
-    margin-top: -15rem;
+    margin-top: -30rem;
     z-index: 50;
     overflow: visible;
 }
@@ -150,7 +150,7 @@ body {
     align-items: flex-start;
     position: relative;
     overflow: visible;
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 2rem;
 }
 
