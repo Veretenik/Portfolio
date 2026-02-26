@@ -581,3 +581,33 @@ body {
 .contact-link:hover {
     opacity: 0.8;
 }
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-link {
+    color: #FFCD7D;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
