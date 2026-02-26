@@ -17,16 +17,60 @@
 </head>
 
 <body>
-    <section class="project-detail">
+    <section class="project-detail anja-detail">
         <a href="../index.html" class="back-link">← Back to Portfolio</a>
 
-        <div class="project-header">
-            <h1>Anja Animation</h1>
-            <p class="project-subtitle">Character Animation Project</p>
+        <div class="anja-header">
+            <p class="anja-subtitle">Illustrated book project</p>
+            <h1 class="anja-title">Anja</h1>
         </div>
 
-        <div class="project-content">
-            <p>This is the Anja Animation project page. More details coming soon.</p>
+        <div class="anja-intro-text">
+            <p>This project started with a few character design sketches. I decided to develop her further. That's how the story of a girl named Anja appeared. She preserves flowers in vases with her magic and sets off on a journey to find a special flower.</p>
+        </div>
+
+        <!-- Full Width Image -->
+        <div class="anja-gallery">
+            <div class="anja-full-width">
+                <img src="../assets/Anja/AnjaConcept.webp" alt="Anja Concept Art">
+            </div>
+
+            <!-- Row 2: Two images -->
+            <div class="anja-row-2">
+                <img src="../assets/Anja/a1.webp" alt="Anja Artwork 1">
+                <img src="../assets/Anja/a2.webp" alt="Anja Artwork 2">
+            </div>
+
+            <!-- Row 3: One image -->
+            <div class="anja-row-3">
+                <img src="../assets/Anja/a3.webp" alt="Anja Artwork 3">
+            </div>
+
+            <!-- Row 4: Two images -->
+            <div class="anja-row-4">
+                <img src="../assets/Anja/a4.webp" alt="Anja Artwork 4">
+                <img src="../assets/Anja/a5.webp" alt="Anja Artwork 5">
+            </div>
+        </div>
+
+        <div class="anja-middle-text">
+            <p>The story became a children's book with more than 20 illustrations. To explore the character further, I created several animations set in the book's world and even made a stop-motion puppet.</p>
+        </div>
+
+        <!-- Reel and a6 Row -->
+        <div class="anja-reel-section">
+            <div class="anja-reel">
+                <img src="../assets/Anja/AnjaReel.gif" alt="Anja Reel">
+            </div>
+        </div>
+
+        <div class="anja-a6-section">
+            <img src="../assets/Anja/a6.webp" alt="Anja Artwork 6">
+        </div>
+
+        <!-- Back to Projects Button -->
+        <div class="anja-button-container">
+            <a href="../index.html#projects" class="anja-back-btn">← Back to Projects</a>
         </div>
     </section>
 
@@ -50,26 +94,163 @@
             opacity: 0.7;
         }
 
-        .project-header {
+        /* Anja Specific Styles */
+        .anja-header {
             margin-bottom: 3rem;
-            text-align: center;
+            text-align: left;
         }
 
-        .project-header h1 {
-            font-size: 3rem;
-            color: #FFCD7D;
+        .anja-subtitle {
+            font-size: 1.1rem;
+            color: #16485C;
+            font-family: "Indie Flower", cursive;
+            margin: 0;
             margin-bottom: 0.5rem;
         }
 
-        .project-subtitle {
-            font-size: 1.2rem;
-            color: #805386;
+        .anja-title {
+            font-size: 4rem;
+            color: #67AAAD;
+            margin: 0;
+            font-family: "Barrio", system-ui;
+            font-weight: 400;
         }
 
-        .project-content {
+        .anja-intro-text {
+            text-align: left;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .anja-intro-text p {
+            font-family: "Indie Flower", cursive;
             font-size: 1.1rem;
-            line-height: 1.8;
-            color: #333;
+            color: #67AAAD;
+            line-height: 1.6;
+        }
+
+        .anja-gallery {
+            margin: 3rem 0;
+        }
+
+        .anja-full-width {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .anja-full-width img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .anja-row-2,
+        .anja-row-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .anja-row-2 img,
+        .anja-row-4 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .anja-row-3 {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .anja-row-3 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .anja-middle-text {
+            text-align: left;
+            margin: 3rem 0;
+            max-width: 800px;
+        }
+
+        .anja-middle-text p {
+            font-family: "Indie Flower", cursive;
+            font-size: 1.1rem;
+            color: #67AAAD;
+            line-height: 1.6;
+        }
+
+        .anja-reel-section {
+            display: flex;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+
+        .anja-reel {
+            width: 40%;
+            max-width: 500px;
+        }
+
+        .anja-reel img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .anja-a6-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .anja-a6-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .anja-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .anja-back-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-family: "Barrio", system-ui;
+            background-color: #67AAAD;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .anja-back-btn:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .anja-title {
+                font-size: 2.5rem;
+            }
+
+            .anja-reel-section {
+                grid-template-columns: 1fr;
+            }
+
+            .anja-row-2,
+            .anja-row-4 {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </body>
