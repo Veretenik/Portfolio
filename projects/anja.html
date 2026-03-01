@@ -18,7 +18,7 @@
 
 <body>
     <section class="project-detail anja-detail">
-        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+        <a href="../index.html" class="anja-back-btn-top">← Back to Projects</a>
 
         <div class="anja-header">
             <p class="anja-subtitle">Illustrated book project</p>
@@ -64,7 +64,8 @@
             </div>
         </div>
 
-        <div class="anja-a6-section">
+        <!-- Last Illustration Full Width -->
+        <div class="anja-row-final">
             <img src="../assets/Anja/a6.webp" alt="Anja Artwork 6">
         </div>
 
@@ -96,7 +97,7 @@
 
         /* Anja Specific Styles */
         .anja-header {
-            margin-bottom: 3rem;
+            margin-bottom: 0;
             text-align: left;
         }
 
@@ -109,23 +110,27 @@
         }
 
         .anja-title {
-            font-size: 4rem;
+            font-size: 8rem;
             color: #67AAAD;
             margin: 0;
             font-family: "Barrio", system-ui;
             font-weight: 400;
+            line-height: 0.9;
         }
 
         .anja-intro-text {
-            text-align: left;
-            margin-bottom: 2rem;
-            max-width: 800px;
+            text-align: right;
+            margin-bottom: 3rem;
+            margin-top: 0;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: 0;
         }
 
         .anja-intro-text p {
             font-family: "Indie Flower", cursive;
-            font-size: 1.1rem;
-            color: #67AAAD;
+            font-size: 1.4rem;
+            color: #7ec4c7;
             line-height: 1.6;
         }
 
@@ -171,15 +176,17 @@
         }
 
         .anja-middle-text {
-            text-align: left;
+            text-align: right;
             margin: 3rem 0;
-            max-width: 800px;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: 0;
         }
 
         .anja-middle-text p {
             font-family: "Indie Flower", cursive;
-            font-size: 1.1rem;
-            color: #67AAAD;
+            font-size: 1.4rem;
+            color: #7ec4c7;
             line-height: 1.6;
         }
 
@@ -200,14 +207,12 @@
             display: block;
         }
 
-        .anja-a6-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+        .anja-row-final {
+            width: 100%;
             margin: 2rem 0;
         }
 
-        .anja-a6-section img {
+        .anja-row-final img {
             width: 100%;
             height: auto;
             display: block;
@@ -218,12 +223,12 @@
             justify-content: center;
             margin-top: 4rem;
             padding-top: 2rem;
-            border-top: 1px solid #e0e0e0;
         }
 
-        .anja-back-btn {
-            padding: 15px 40px;
-            font-size: 1.2rem;
+        .anja-back-btn,
+        .anja-back-btn-top {
+            padding: 10px 25px;
+            font-size: 0.95rem;
             font-family: "Barrio", system-ui;
             background-color: #67AAAD;
             color: white;
@@ -231,9 +236,15 @@
             border-radius: 4px;
             transition: all 0.3s ease;
             letter-spacing: 1px;
+            display: inline-block;
         }
 
-        .anja-back-btn:hover {
+        .anja-back-btn-top {
+            margin-bottom: 2rem;
+        }
+
+        .anja-back-btn:hover,
+        .anja-back-btn-top:hover {
             opacity: 0.8;
             transform: scale(1.05);
         }

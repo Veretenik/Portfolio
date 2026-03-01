@@ -409,6 +409,58 @@ body {
     font-size: 0.95rem;
 }
 
+/* Anja Project Card Special Styling */
+.anja-project-card {
+    box-shadow: none;
+}
+
+.anja-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+.anja-project-card:hover {
+    transform: none;
+}
+
+.anja-project-card:hover .anja-overlay {
+    opacity: 1;
+    background-color: #67AAAD;
+}
+
+.anja-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 2rem;
+}
+
+.anja-overlay h3 {
+    font-size: 2.5rem;
+    font-family: "Barrio", system-ui;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.anja-overlay p {
+    font-size: 1.2rem;
+    font-family: "Indie Flower", cursive;
+    color: white;
+}
+
 /* ===== PARALLAX SCROLL EFFECT ===== */
 @keyframes scroll-gallery {
     0% {
