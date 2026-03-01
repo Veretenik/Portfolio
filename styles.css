@@ -461,6 +461,110 @@ body {
     color: white;
 }
 
+/* Poker Project Card Special Styling */
+.poker-project-card {
+    box-shadow: none;
+}
+
+.poker-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+.poker-project-card:hover {
+    transform: none;
+}
+
+.poker-project-card:hover .poker-overlay {
+    opacity: 1;
+    background-color: #F82E64;
+}
+
+.poker-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 2rem;
+}
+
+.poker-overlay h3 {
+    font-size: 2.5rem;
+    font-family: "Barrio", system-ui;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.poker-overlay p {
+    font-size: 1.2rem;
+    font-family: "Indie Flower", cursive;
+    color: white;
+}
+
+/* Hexen Project Card Special Styling */
+.hexen-project-card {
+    box-shadow: none;
+}
+
+.hexen-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+.hexen-project-card:hover {
+    transform: none;
+}
+
+.hexen-project-card:hover .hexen-overlay {
+    opacity: 1;
+    background-color: #50277C;
+}
+
+.hexen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 2rem;
+}
+
+.hexen-overlay h3 {
+    font-size: 2.5rem;
+    font-family: "Barrio", system-ui;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.hexen-overlay p {
+    font-size: 1.2rem;
+    font-family: "Indie Flower", cursive;
+    color: white;
+}
+
 /* ===== PARALLAX SCROLL EFFECT ===== */
 @keyframes scroll-gallery {
     0% {
@@ -641,6 +745,148 @@ body {
     padding: 2rem;
     text-align: center;
     margin-top: 4rem;
+}
+
+/* ===== HEXEN PROJECT STYLES ===== */
+.hexen-detail {
+    position: relative;
+}
+
+.hexen-header {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.hexen-subtitle {
+    font-size: 1.1rem;
+    color: #50277C;
+    font-family: "Indie Flower", cursive;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.hexen-title {
+    font-size: 8rem;
+    color: #FFBE31;
+    margin: 0;
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.hexen-intro-text {
+    text-align: right;
+    margin-bottom: 3rem;
+    margin-top: 0;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.hexen-intro-text p {
+    font-family: "Indie Flower", cursive;
+    font-size: 1.4rem;
+    color: #50277C;
+    line-height: 1.6;
+}
+
+.hexen-gallery {
+    margin: 3rem 0;
+}
+
+.hexen-full-width {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.hexen-full-width img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hexen-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.hexen-row-2-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hexen-row-2-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hexen-row-2-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hexen-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hexen-row-3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hexen-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+
+.hexen-back-btn,
+.hexen-back-btn-top {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+    font-family: "Barrio", system-ui;
+    background-color: #50277C;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.hexen-back-btn-top {
+    margin-bottom: 2rem;
+}
+
+.hexen-back-btn:hover,
+.hexen-back-btn-top:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hexen-title {
+        font-size: 2.5rem;
+    }
+
+    .hexen-row-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .hexen-row-3 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .footer-content {
