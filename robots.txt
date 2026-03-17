@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/
 
-Sitemap: https://anastasia-veretennikova.de/sitemap.xml
+Sitemap: https://veretenik.art/sitemap.xml
