@@ -579,49 +579,105 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    /* Hero */
+    .hero {
+        height: 50vh;
+    }
+
     .hero-nav {
-        gap: 1rem;
+        gap: 0.8rem;
     }
 
     .nav-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        padding: 12px 24px;
+        font-size: 1.1rem;
     }
 
     .section-title {
         font-size: 2rem;
     }
 
+    /* Gallery */
+    .gallery-section {
+        height: auto;
+        min-height: 40vh;
+        padding: 1.5rem 0;
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+
+    .gallery-wrapper {
+        padding: 0 1rem;
+    }
+
+    .gallery-container {
+        gap: 1rem;
+    }
+
+    /* About */
+    .about-section {
+        margin-top: 0;
+        padding: 2rem 1rem;
+    }
+
     .about-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+        padding: 1rem;
     }
 
     .about-image {
         order: -1;
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         margin: 0 auto;
     }
 
     .about-container .section-title {
         position: relative;
         top: 0;
+        right: auto;
+        left: auto;
         font-size: 3rem;
         text-align: center;
         color: #FFCD7D;
+        white-space: normal;
+        margin-bottom: 1rem;
+    }
+
+    .about-text {
+        text-align: left;
+        font-size: 1.05rem;
+    }
+
+    /* Showreel */
+    .showreel-section {
+        margin-top: 0;
+        padding: 2rem 1rem;
     }
 
     .showreel-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    .year-badge {
+        font-size: 28vw;
+        margin-top: 0;
+        line-height: 0.75;
+    }
+
+    .showreel-label {
+        font-size: 2rem;
+        letter-spacing: 0.15rem;
     }
 
     .showreel-content .section-title {
         text-align: center;
     }
 
-    .about-text,
     .showreel-text {
         text-align: center;
     }
@@ -636,34 +692,39 @@ body {
         min-width: 200px;
     }
 
-    .gallery-item {
-        width: 300px;
-        height: 225px;
-    }
-
-    .gallery-wrapper {
-        padding: 0 1rem;
-    }
-
-    .gallery-container {
-        gap: 1rem;
+    /* Projects */
+    .projects-section .section-title {
+        font-size: 3rem;
     }
 
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    /* Contact */
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-section {
+        padding: 3rem 1rem;
     }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        height: 40vh;
+        padding-bottom: 1rem;
+    }
+
     .hero-nav {
-        flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.3rem;
     }
 
     .nav-btn {
-        width: 100%;
-        max-width: 200px;
+        padding: 8px 18px;
+        font-size: 0.95rem;
     }
 
     .section-title {
@@ -671,8 +732,12 @@ body {
         margin-bottom: 2rem;
     }
 
+    .about-container .section-title {
+        font-size: 2.2rem;
+    }
+
     .about-container {
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .skills-list {
@@ -685,7 +750,15 @@ body {
     }
 
     .showreel-container {
-        gap: 1.5rem;
+        gap: 1rem;
+    }
+
+    .year-badge {
+        font-size: 32vw;
+    }
+
+    .showreel-label {
+        font-size: 1.4rem;
     }
 
     .showreel-highlights {
@@ -697,12 +770,19 @@ body {
     }
 
     .gallery-item {
-        width: 250px;
-        height: 188px;
+        height: 160px;
+    }
+
+    .projects-section .section-title {
+        font-size: 2.2rem;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-title {
+        font-size: 1.6rem;
     }
 }
 
@@ -886,6 +966,34 @@ body {
 
     .hexen-row-3 {
         grid-template-columns: 1fr;
+    }
+
+    .hexen-char-title,
+    .hexen-bg-title {
+        position: relative;
+        top: 0;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hexen-intro-text {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .hexen-intro-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hexen-title {
+        font-size: 2rem;
+    }
+
+    .hexen-char-title,
+    .hexen-bg-title {
+        font-size: 1.8rem;
     }
 }
 

@@ -123,9 +123,27 @@
         .anja-back-btn:hover, .anja-back-btn-top:hover { opacity: 0.8; transform: scale(1.05); }
 
         @media (max-width: 768px) {
-            .anja-title { font-size: 2.5rem; }
+            .anja-title { font-size: 3.5rem; }
             .anja-reel-section { grid-template-columns: 1fr; }
             .anja-row-2, .anja-row-4 { grid-template-columns: 1fr; }
+            .anja-reel { width: 70%; }
+            .anja-intro-text {
+                text-align: left;
+                max-width: 100%;
+            }
+            .anja-intro-text p { font-size: 1.1rem; }
+            .anja-middle-text {
+                text-align: left;
+                max-width: 100%;
+            }
+            .anja-middle-text p { font-size: 1.1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .anja-title { font-size: 2.5rem; }
+            .anja-reel { width: 85%; }
+            .anja-intro-text p, .anja-middle-text p { font-size: 1rem; }
+            .project-detail { padding: 2rem 1rem; }
         }
     </style>
 </body>
