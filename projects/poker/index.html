@@ -79,14 +79,14 @@
         .poker-overlay-image-2-header { position: absolute; right: 0; top: 0; width: 25%; max-width: 250px; }
         .poker-overlay-image-2-header img { width: 100%; height: auto; display: block; }
         .poker-intro-text { text-align: right; margin-bottom: 3rem; margin-top: 0; max-width: 850px; margin-left: auto; margin-right: 0; position: relative; }
-        .poker-overlay-image-1-header { position: absolute; left: 0; top: 13rem; width: 50%; max-width: 500px; }
+        .poker-overlay-image-1-header { position: absolute; left: 0; top: 13rem; width: 50%; max-width: 500px; z-index: 2; }
         .poker-overlay-image-1-header img { width: 100%; height: auto; display: block; }
         .poker-intro-text p { font-family: "Indie Flower", cursive; font-size: 1.4rem; color: #F82E64; line-height: 1.6; }
         .poker-gallery { margin: 3rem 0; }
         .poker-row-2, .poker-row-4 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
         .poker-row-2 img, .poker-row-4 img { width: 100%; height: auto; display: block; }
-        .poker-walk1-wrapper { position: relative; align-self: start; }
-        .poker-overlay-mobile { display: none; }
+        .poker-walk1-wrapper { position: relative; align-self: start; overflow: visible; }
+        .poker-row-2 .poker-overlay-mobile { display: none; }
         .poker-row-3 { width: 100%; margin-bottom: 2rem; }
         .poker-row-3 img { width: 100%; height: auto; display: block; }
         .poker-video-section { margin: 3rem 0; }
@@ -112,14 +112,15 @@
             .poker-overlay-image-1-header {
                 display: none;
             }
-            .poker-overlay-mobile {
+            .poker-row-2 .poker-overlay-mobile {
                 display: block;
                 position: absolute;
                 left: 0;
-                top: 0;
+                top: -90%;
                 width: 100%;
                 height: auto;
                 z-index: 1;
+                pointer-events: none;
             }
             .poker-intro-text {
                 text-align: left;
